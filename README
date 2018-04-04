@@ -1,0 +1,75 @@
+CatBot version 0.4.2 - An HTML-based Chatterbot.
+Copyright (C) 2006 Cody Jung
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+You can find the license in the file LICENSE (makes sense, yes?)
+
+/////////////////////////////////////////////
+
+
+INTRODUCTION
+------------
+
+Hey!
+Thanks for downloading CatBot.
+CatBot was originally created as a non-memory-intensive HTML-based alternative to a
+popular PERL chatterbot, Leviathan, that was created by AiChaos, Inc.  My goal was to
+create a very simple HTML/PHP chatterbot.
+
+As I have released this version of CatBot under the GPL/GNU license, feel free to change
+things, add more commands, etc. With a little tweaking here or there, he would make a nice
+support desk assistant. I simply ask that you do not make any money off of him. I don't - 
+with the exception of donations, and I would rather that other people don't profit from my work.
+
+Remember - this is entirely a volunteer thing. This isn't what I do for a living. If you need
+help, first try and figure it out yourself. If that fails, try harder. And if you still can't
+seem to get it, you may email me at funkycat32 -at- gmail -dot- com, and I'll try and help you
+as much as I can.
+
+Have fun,
+Cody J.
+
+
+REQUIREMENTS
+------------
+
+A Web Server (tested with Apache v.2.2.2)
+PHP (tested with v.5.1.4)
+MySQL (tested with v.4.1.7)
+
+
+
+INSTALLATION
+------------
+
+1) Unpack the zip file and upload its contents to your web server.
+2) Make sure that the file 'log.txt' is writable.
+3) Run the setup. There is a link on index.php if you have not run it yet, or
+   you can run setup.php directly.
+4) You can edit the logo if you wish. I've included a PSD file in the /images subfolder.
+5) Have fun!
+
+
+
+SUPPORT
+-------
+
+Figure it out yourself.
+(But if that fails, email me at funkycat32 -at- gmail -dot- com)
+
+
+
+DONATIONS
+---------
+
+I'm always accepting money from anyone who wants to give some to me. :P
+If you downloaded CatBot, and you like what you see, and if you're feeling particularily
+nice, you can Paypal me a couple of dollars at funkycat32 -at- gmail -dot- com.
+
+If you donate money at SourceForge, I set half of it to go to Sourceforge and half to
+go to the Apache Software Foundation. If you really want the money to go to me, 
+you can use Paypal.

@@ -1,0 +1,1 @@
+<?php$host = 'localhost';$username = 'root';$password = '';$database = 'sql';$configured = 1;$logging = TRUE;$logfile = 'log.txt'; $allowcommands = TRUE;?>

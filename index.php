@@ -13,7 +13,7 @@ included in the package.
 ?>
 <html>
 <head>
-<title>Talk to CatBot</title>
+<title>Talk to PC</title>
 <link rel="StyleSheet" type="text/css" href="catbotcss.css">
 
 <?php
@@ -234,17 +234,17 @@ fclose($handle);
 <body onLoad="document.catbot.msg.focus()">
 
 <div class="logo">
-<img src="images/logo.jpg" width="400" height="100" alt="CatBot the Chatterbot">
+	<strong style="padding-top: 50px;font-size: 30px;vertical-align: middle;display: block;">Talk TO PC</strong>
 </div>
 <br /><br />
 
 <div class="chatwindow">
 <div align="center">
 
-<form name="catbot" action="<?php echo($_SERVER["PHP_SELF"]); ?>" method="post">
+<form id="form_id" name="catbot" action="<?php echo($_SERVER["PHP_SELF"]); ?>" method="post">
 <b>Msg:</b>
-<input type="text" name="msg" size="30" class="text">
-<input type="submit" name="submit" value="Send!" class="bttn">
+<input type="text" name="msg" size="30" class="text" id="output">
+<input type="submit" name="submit" value="Send!" class="bttn" id="submit">
 <input type="hidden" name="lastcatbot" value="<?php echo $simplecatbot; ?>">
 <input type="hidden" name="lastwascomm" value="<?php echo $command; ?>">
 </form>
@@ -253,16 +253,44 @@ fclose($handle);
 <div class="leftalign">
 <b class="yousay">You say:</b> <?php echo stripslashes($usermessage); ?><br /><br />
 
-<b class="catbotsays">CatBot replies:</b> <?php echo $catbotreply;?><br /><br />
+<b class="catbotsays">PC replies:</b> <span id="main_reply"><?php echo $catbotreply;?></span><br /><br />
+<p></p>
 </div>
 </div>
 </div>
 
 <br /><br />
 <div class="copyrights">
-To add a reply to CatBot, use the !addreply command.
+To add a reply to Pc, use the !addreply command.
 <hr>
-CatBot is released under the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a>. 
 </div>
+
+<script type="text/javascript">
+	var reply=document.getElementById("main_reply").innerHTML;
+	var msg = new SpeechSynthesisUtterance(reply);
+	window.speechSynthesis.speak(msg)
+
+
+
+
+	var recognition = new webkitSpeechRecognition();
+recognition.continuous = true;
+
+var output = document.getElementById('output');
+recognition.onresult = function(event) {
+  output.value = event.results[0][0].transcript;
+  document.getElementById('submit').click();
+  
+  
+	sub();
+};
+function sub(){
+	document.getElementById("form_id").submit();
+}
+
+recognition.start();
+
+// setTimeout(function(){ window.location['reload']();}, 10000);
+</script>
 </body>
 </html>
